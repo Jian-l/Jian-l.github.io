@@ -1,7 +1,28 @@
-<div class="topnav">
+<style>
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li.topnavList {
+  float: right;
+}
+
+li.topnavList a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+</style>
+
+<ul class='topnav'>
   {% for item in site.data.navigation %}
-    <li style="float:right"><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-      {{ item.name }}
-    </a></li>
+    <li class="topnavList" style="float:right"><a href="{{ item.link }}">{{ item.name }}</a></li>
   {% endfor %}
-</div>
+</ul>
